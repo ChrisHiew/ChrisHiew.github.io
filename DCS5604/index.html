@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VoiceGuard Your Security Guard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <link rel="icon" type="image/png" href="logo.png">
+ 
+</head>
+<body>
+ <script>
+   function toggleText(btn) {
+  const fullText = btn.previousElementSibling;
+
+  if (fullText.style.display === "none" || fullText.style.display === "") {
+    fullText.style.display = "block";
+    btn.textContent = "Show Less";
+  } else {
+    fullText.style.display = "none";
+    btn.textContent = "Load More";
+  }
+}
+
+  </script>
+<!-- navigation bar -->
+  <header class="header">
+    <div class="logo">
+	<a href="index.html">
+
+      <img src="logo.png" alt="Logo" style="height: 40px;">
+	 </a>
+      <div class="logo-text">
+        <strong>Voice</strong>
+        <span>Guard</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT US</a>
+       <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Type to search...">
+    <button onclick="search()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+  <p id="searchResult"></p>
+    </nav>
+  </header>
+ <script>
+    function search() {
+      const keyword = document.getElementById("searchInput").value;
+      if (keyword.trim() !== "") {
+        document.getElementById("searchResult").innerText = "You searched for: " + keyword;
+        // 这里你可以改为跳转页面，或发送请求
+        // window.location.href = "/search?query=" + encodeURIComponent(keyword);
+      } else {
+        alert("Please enter something to search.");
+      }
+    }
+
+    // 支持按下 Enter 键也能搜索
+    document.getElementById("searchInput").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        search();
+      }
+    });
+  </script>
+  <!-- blur box -->
+ <div class="hero-section">
+    <div class="overlay-box">
+      <p>
+        At the cutting edge of AI and smart home innovation,<br>
+        our platform introduces a revolutionary approach to<br>
+        access control emotional and voiceprint recognition<br>
+        for door locks.
+      </p>
+       <a href="about.html"><button>See How It Works</button></a>
+    </div>
+  </div>
+
+<section class="info-section">
+  <div class="info-image">
+    <img src="section2.1.png" alt="Info Image">
+  </div>
+  <div class="info-text">
+    <h1>Next-Gen Door Locking Starts with Emotion</h1>
+
+    <h2>"Our Journey"</h2>
+    <p class="short-text">
+  At voice guard, our mission began with a simple yet powerful idea.
+  What if a door lock could understand more than just identity—what if it could understand emotional?
+  
+</p>
+	
+	<p class="full-text">
+	In a world where home security matters more than ever, we noticed a critical gap in traditional systems. 
+	While most locks focus solely on verifying identity, we asked a deeper question: </p>
+    <button class="load-more-btn" onclick="toggleText(this)">Load More</button>
+<br><br><br>
+	<section class="highlight-section">
+  <h2>Shouldn’t security also care about the emotional state of the person at the door?</h2>
+  <p>That’s why we set out to build a smarter, more human form of access control — one that not only listens to your voice, but also understands your emotions. This is the future of intelligent security. And it starts with empathy.</p>
+
+  </div>
+</section>
+</section>
+
+<!-- Why Choose Section -->
+<section class="feature-overview">
+  <h2>Why Choose VoiceGuard?</h2>
+  <div class="feature-highlights">
+    <div class="highlight">🔒 Improvement of Security Level</div>
+    <div class="highlight">💡 Sentimental Analysis</div>
+    <div class="highlight">🗣️ Voiceprint Recognition</div>
+    <div class="highlight">🚨 Emergency Response</div>
+  </div>
+  <br>
+</section>
+	<section class="feature-section">
+    <div class="feature-row">
+	
+    <div class="text">
+      <h2>Voice Recognition - Only “you” are allowed to enter</h2>
+      <h4>Identity Exclusive - Voice Recognition Unlocking</h4>
+      <p>The system accurately verifies whether the voice of the person who enters the door is a registered user or not through voice recognition technology.
+	Only users whose voiceprints have been registered and successfully matched are authorized to open the door, preventing others from imitating or entering illegally. 
+	Let the “key” belongs to you only.    </div>
+    
+	<div class="image">
+      <img src="section4.1.png" alt="Voice Recognition">
+    </div>
+
+  </div>
+
+  <div class="feature-row">
+    <div class="text">
+      <h2>Emotion Recognition - Determining if you're really safe</h2>
+      <h4>Emotion Sensing - Preventing coercion to open the door</h4>
+      <p>Recognizes not only who you are, but whether you're “normal” or not. 
+	The system will judge by the tone of voice, speed of speech and emotional characteristics,
+	and will only allow the door to be opened if you are in a calm, normal emotional state. 
+	Even in person, emotional abnormalities will be automatically intercepted.      </p>
+    </div>
+    <div class="image">
+      <img src="section4.2.png" alt="Emotion Recognition">
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="text">
+      <h2>Emergency Response - Emotionally Abnormal Automatic Alarm </h2>
+      <h4>Abnormal Recognition - Automatic Alarm and Protection</h4>
+      <p>When the system detects that the registered user's emotion is in a state of anger, 
+	fear, or coercion, the door lock will automatically lock and not open the door, and at the 
+	same time, immediately send out an alarm and send an emergency message to the preset emergency contact 
+	to realize the first time active protection. When the system detects that the registered user is in a state 
+	of anger, fear or duress, the door lock will automatically lock and not open.      </p>
+    </div>
+    <div class="image">
+      <img src="section4.3.png" alt="Emergency Response">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Contact Section -->
+  <section id="contact">
+    <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+      <!-- 插入图片海报 -->
+       <div style="flex: 1; text-align: center;">
+    <img src="poster.png" alt="VoiceGuard Poster"
+         style="max-width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+
+      <h2>Feel Free to Contact Us</h2>
+      <p>Email: <a href="mailto:contact@example.com">VoiceGuard@mysite.com</a> | Phone: <strong>011-55068856</strong></p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-box">
+        <h2>VoiceGuard</h2>
+        <p>Your safety and life security guard</p>
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Get in Touch</h4>
+        <p>Email: <a href="mailto:VoiceGuard@mysite.com">VoiceGuard@mysite.com</a></p>
+        <p>No. 72, Jalan Pahang, Kuala Lumpur<br>53000, Malaysia</p>
+        <p>Phone: 011-55068856</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2023 All rights reserved. Design by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

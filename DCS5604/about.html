@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VoiceGuard Your Security Guard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+<link rel="icon" type="image/png" href="logo.png">
+
+</head>
+<body>
+
+  </script>
+<!-- navigation bar -->
+  <header class="header">
+    <div class="logo">
+     <a href="index.html">
+      <img src="logo.png" alt="Logo" style="height: 40px;">
+      </a>
+      <div class="logo-text">
+        <strong>Voice</strong>
+        <span>Guard</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" >HOME</a>
+      <a href="about.html" class="active">ABOUT</a>
+      <a href="contact.html">CONTACT US</a>
+ <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Type to search...">
+    <button onclick="search()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+  <p id="searchResult"></p>
+    </nav>
+  </header>
+
+
+<script>
+    function search() {
+      const keyword = document.getElementById("searchInput").value;
+      if (keyword.trim() !== "") {
+        document.getElementById("searchResult").innerText = "You searched for: " + keyword;
+        // 这里你可以改为跳转页面，或发送请求
+        // window.location.href = "/search?query=" + encodeURIComponent(keyword);
+      } else {
+        alert("Please enter something to search.");
+      }
+    }
+
+    // 支持按下 Enter 键也能搜索
+    document.getElementById("searchInput").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        search();
+      }
+    });
+  
+
+function toggleTable() {
+  const table = document.getElementById("comparisonTable");
+  const button = document.querySelector(".toggle-btn");
+  if (table.classList.contains("hidden")) {
+    table.classList.remove("hidden");
+    button.textContent = "Hide Comparison";
+  } else {
+    table.classList.add("hidden");
+    button.textContent = "View Comparison";
+  }
+}
+
+  </script>
+
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">What is VoiceGuard?</h2>
+    <p class="section-description">
+      VoiceGuard is an advanced access control system that integrates state-of-the-art 
+      <span class="highlight-1">voiceprint with real time emotion analysis</span> It leverages cutting-edge <span class="highlight-1">speech processing</span> and <span class="highlight-1">affective computing technologies</span>
+      to enable secure, intelligent, and context-aware entry.
+    </p>
+
+  </section>
+  <section class="about-section-2">
+ <h1 style="margin-top: 40px;">Why Traditional Door Locks Are No Longer Sufficient</h1>
+    <h3>Limitations of Conventional Security Methods</h3>
+    <p>
+Traditional locking mechanisms—whether mechanical keys, passcodes, or static biometrics—lack adaptability and contextual awareness. VoiceGuard addresses these limitations by incorporating multimodal authentication, 
+combining biometric identity (voiceprint) with emotional state detection to provide dynamic, user-aware access control that resists spoofing and enhances trust.    </p>
+  </div>
+
+
+
+</section>
+
+<section class="about-section-1">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+   
+
+    <table align="center">
+ <tr>
+        <td>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <h3>Voice Command</h3> 
+            </div>
+            <div class="flip-card-back">
+              <p>The user speaks a preset voice password.</p> 
+            </div>
+          </div>
+        </div>
+        
+          </td>
+   
+          <td>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <h3>Voiceprint Recognition</h3> 
+            </div>
+            <div class="flip-card-back">
+              <p>The system verifies the speaker's identity.</p> 
+            </div>
+          </div>
+        </div>
+        
+          </td>
+ </tr>
+           
+        <tr>
+          <td>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <h3> Emotion Detection</h3> 
+            </div>
+            <div class="flip-card-back">
+              <p>The system analyzes the user's emotional state.</p> 
+            </div>
+          </div>
+        </div>
+          </td>
+   
+          <td>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <h3>Unlock and Alert</h3> 
+            </div>
+            <div class="flip-card-back">
+              <p>Normal emotion<br>
+               ↓ <br>
+          Unlock
+          <br>
+          --------------------------
+               <br>Abnormal 
+               <br>↓ <br>Alert, send emergency message</p> 
+               <br>
+            </div>
+          </div>
+        </div>
+        
+          </td>
+          
+ </tr>
+ </table>
+ </section>
+
+<div class="comparison-section">
+  <h2 class="section-title">Comparison with Traditional Locks</h2>
+  <button class="toggle-btn" onclick="toggleTable()">View Comparison</button>
+
+  <div id="comparisonTable" class="comparison-table-container hidden">
+    <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Traditional Lock</th>
+        <th>Modern Smart Lock</th>
+        <th>Face Recognition Lock</th>
+        <th class="voiceguard">VoiceGuard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="feature-title">Identity Verification</td>
+        <td>❌</td>
+        <td>&#9989;(basic)</td>
+        <td>&#9989;</td>
+        <td class="voiceguard">Voiceprint authentication, exclusive to your voice</td>
+      </tr>
+      <tr>
+        <td class="feature-title">Access Method</td>
+        <td>Physical Key</td>
+        <td>Password, Access Card, App</td>
+        <td>Face Recognition,Password, Access Card, App</td>
+        <td class="voiceguard">Voiceprint and Emotional Authentication</td>
+      </tr>
+       <tr>
+        <td class="feature-title">Security Risk</td>
+        <td>Easy to lose / Easy to copy</td>
+        <td>Device may be compromised</td>
+        <td>Spoofing & light issues</td>
+        <td class="voiceguard">Execlusive voice identify</td>
+      </tr>
+      
+
+      <tr>
+        <td class="feature-title">Emergency Handling</td>
+        <td>❌</td>
+        <td>Basic alerts, no emotion-based logic</td>
+        <td>Limited to unauthorized access alerts</td>
+        <td class="voiceguard">Emotion-triggered auto-lock and emergency alerts</td>
+      </tr>
+      <tr>
+        <td class="feature-title">Emotion Detection </td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td class="voiceguard">Normal emotion-based</td>
+      </tr>
+       <tr>
+        <td class="feature-title">Smart Integration</td>
+        <td>❌</td>
+        <td>App-connected, but passive</td>
+        <td>Limited smart features</td>
+        <td class="voiceguard">Emotion-aware, intelligent system response</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<section class="live-demo-section">
+  <div class="container">
+    <h2 class="section-title">Try It Live</h2>
+    <p class="section-description">Experience VoiceGuard in action. Click the button below to access the live demo or preview it directly on this page.</p>
+    
+    <div class="demo-buttons" style="text-align: center; margin-bottom: 20px;">
+      <a href="https://voiceguard.ngrok.app/" class="demo-button" target="_blank">🔗 Open Live Site</a>
+    </div>
+<br>
+    <div class="iframe-container">
+      <iframe src="https://voiceguard.ngrok.app/" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>❓ FAQ</h2>
+  <div class="faq-item">
+    <h3>1. How does VoiceGuard recognize my identity?</h3>
+    <p>VoiceGuard uses voiceprint recognition technology to analyze the unique characteristics of your voice and ensure it’s really you.</p>
+  </div>
+  <div class="faq-item">
+    <h3>2. What if I'm in a bad mood? Will I be locked out?</h3>
+    <p>The system detects emotional anomalies. If your mood significantly deviates from the normal range, it may temporarily deny access and trigger an alert for safety reasons.</p>
+  </div>
+  <div class="faq-item">
+    <h3>3. Can I change my voice password?</h3>
+    <p>Yes, you can re-register your voice password through the admin panel or website.</p>
+  </div>
+  <div class="faq-item">
+    <h3>4. Can someone unlock the door by playing a recording of my voice?</h3>
+    <p>No. The system not only recognizes the content but also analyzes vocal features like frequency, resonance, and tone to ensure it's a live human voice.</p>
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-box">
+        <h2>VoiceGuard</h2>
+        <p>Your safety and life security guard</p>
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Get in Touch</h4>
+        <p>Email: <a href="mailto:VoiceGuard@mysite.com">VoiceGuard@mysite.com</a></p>
+        <p>No. 72, Jalan Pahang, Kuala Lumpur<br>53000, Malaysia</p>
+        <p>Phone: 011-55068856</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2023 All rights reserved. Design by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
